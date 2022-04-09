@@ -5,10 +5,10 @@ import asyncio
 
 bot = commands.Bot(command_prefix="!", intents=discord.Intents.all())
 
-GUILD_ID = 0 # Server ID eintragen! 
-TEAM_ROLE = 0 # Die Rolle, welches die Tickets sehen soll! 
-TICKET_CHANNEL = 0 # Der Channel, wo Tickets geöffnet werden sollen! 
-CATEGORY_ID = 0 # Die Kategorie, wo die Tickets erstellt werden sollen! 
+GUILD_ID = 959270838400585768 # Server ID eintragen! 
+TEAM_ROLE = 959271226335952916 # Die Rolle, welches die Tickets sehen soll! 
+TICKET_CHANNEL = 961880292094783488 # Der Channel, wo Tickets geöffnet werden sollen! 
+CATEGORY_ID = 962324021234503770 # Die Kategorie, wo die Tickets erstellt werden sollen! 
 
 @bot.event
 async def on_ready():
@@ -69,4 +69,5 @@ async def close(ctx):
         await asyncio.sleep(5)
         await ctx.channel.delete()
 
-bot.run("") # Hier den Token rein setzen!
+access_token = os.environ["BOT_TOKEN"]
+bot.run("access_token") # Hier den Token rein setzen!
